@@ -2,7 +2,7 @@
 
 ## Todo
 
-- [] Deploy
+- [x] Deploy
 - [] scaffold basic UI with mock data
 - [] setup DB (w/ vercel postgres)
 - [] integrate UI with DB
@@ -13,3 +13,4 @@
 - [] Delete Button (w/ Server Actions)
 - [] Analytics (w/Posthug)
 - [] Ratelimiting (w/Upstash)
+- []
