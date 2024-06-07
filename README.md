@@ -3,7 +3,8 @@
 ## Todo
 
 - [x] Deploy
-- [] scaffold basic UI with mock data
+- [x] scaffold basic UI with mock data
+- [x] tidy up build
 - [] setup DB (w/ vercel postgres)
 - [] integrate UI with DB
 - [] setup auth (w/ Clerk)
