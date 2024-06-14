@@ -9,6 +9,8 @@
 - [x] integrate UI with DB
 - [x] setup auth (w/ Clerk)
 - [] Add Image Upload
+- [] taint (server-only)
+- [] use Next/Image component
 - [] Add Error mgnt (w/ Sentry)
 - [] Page Routing (w/ Parallel Routes)
 - [] Delete Button (w/ Server Actions)
