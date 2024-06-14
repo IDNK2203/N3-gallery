@@ -7,7 +7,7 @@
 - [x] tidy up build
 - [x] setup DB (w/ vercel postgres)
 - [x] integrate UI with DB
-- [] setup auth (w/ Clerk)
+- [x] setup auth (w/ Clerk)
 - [] Add Image Upload
 - [] Add Error mgnt (w/ Sentry)
 - [] Page Routing (w/ Parallel Routes)
