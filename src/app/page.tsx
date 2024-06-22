@@ -9,14 +9,12 @@ async function ImageGallery() {
   });
   return (
     <>
-      {[...dbImages, ...dbImages, ...dbImages].map(
-        ({ url, id, name }, index) => (
-          <div key={id + "-" + index} className="w-48">
-            <img src={url} />
-            <p>{name}</p>
-          </div>
-        ),
-      )}
+      {dbImages.map(({ url, id, name }, index) => (
+        <div key={id + "-" + index} className="w-48">
+          <img src={url} />
+          <p>{name}</p>
+        </div>
+      ))}
     </>
   );
 }
