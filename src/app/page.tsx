@@ -1,12 +1,11 @@
-import { db } from "~/server/db";
 export const dynamic = "force-dynamic";
 
 import { SignedIn, SignedOut } from "@clerk/nextjs";
+import { getMyImages } from "~/server/queries";
 
 async function ImageGallery() {
-  const dbImages = await db.query.images.findMany({
-    orderBy: (model, { desc }) => desc(model.id),
-  });
+  const dbImages = await getMyImages();
+
   return (
     <>
       {dbImages.map(({ url, id, name }, index) => (

@@ -8,8 +8,8 @@
 - [x] setup DB (w/ vercel postgres)
 - [x] integrate UI with DB
 - [x] setup auth (w/ Clerk)
-- [] Add Image Upload
-- [] taint (server-only)
+- [x] Add Image Upload
+- [x] taint (server-only)
 - [] use Next/Image component
 - [] Add Error mgnt (w/ Sentry)
 - [] Page Routing (w/ Parallel Routes)
