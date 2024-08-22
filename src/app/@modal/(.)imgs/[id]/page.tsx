@@ -1,8 +1,7 @@
-// import { Modal } from './modal';
+import { Modal } from "./modal";
+import PhotoPageContainer from "~/components/PhotoPageContainer";
 
-import { getImage } from "~/server/queries";
-
-export default async function PhotoModal({
+export default function PhotoModal({
   params: { id: photoId },
 }: {
   params: { id: string };
@@ -11,11 +10,9 @@ export default async function PhotoModal({
   const isNotNum = Number.isNaN(isIdNum);
   if (isNotNum) throw new Error("Invalid Id");
 
-  const Image = await getImage(isIdNum);
-
   return (
-    <div>
-      <img src={Image.url} className="h-56 w-96" />
-    </div>
+    <Modal>
+      <PhotoPageContainer id={isIdNum} />
+    </Modal>
   );
 }

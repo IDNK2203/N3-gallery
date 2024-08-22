@@ -1,5 +1,6 @@
 "use client";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { UploadButton } from "~/utils/uploadthing";
 
@@ -7,7 +8,10 @@ export default function TopNav() {
   const router = useRouter();
   return (
     <nav className="flex justify-between border-b p-4 text-xl font-semibold">
-      <p>N3-Gallery</p>
+      <p>
+        {" "}
+        <Link href={"/"}>N3-Gallery</Link>
+      </p>
 
       <SignedOut>
         <SignInButton />

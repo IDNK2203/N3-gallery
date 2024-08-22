@@ -1,9 +1,13 @@
-// import { Modal } from './modal';
+import PhotoPageContainer from "~/components/PhotoPageContainer";
 
-export default function PhotoModal({
+export default function PhotoPage({
   params: { id: photoId },
 }: {
   params: { id: string };
 }) {
-  return <>{photoId}</>;
+  const isIdNum = Number(photoId);
+  const isNotNum = Number.isNaN(isIdNum);
+  if (isNotNum) throw new Error("Invalid Id");
+
+  return <PhotoPageContainer id={isIdNum} />;
 }
