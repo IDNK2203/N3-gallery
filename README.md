@@ -5,13 +5,13 @@
 - [x] Deploy
 - [x] scaffold basic UI with mock data
 - [x] tidy up build
-- [x] setup DB (w/ vercel postgres)
+- [x] setup DB (w/ vercel postgress)
 - [x] integrate UI with DB
 - [x] setup auth (w/ Clerk)
 - [x] Add Image Upload
 - [x] taint (server-only)
 - [x] use Next/Image component
-- [] Add Error mgnt (w/ Sentry)
+- [x] Add Error mgnt (w/ Sentry)
 - [] Page Routing (w/ Parallel Routes)
 - [] Delete Button (w/ Server Actions)
 - [] Analytics (w/Posthug)

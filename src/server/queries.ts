@@ -14,3 +14,18 @@ export async function getMyImages() {
 
   return dbImages;
 }
+export async function getImage(id: number) {
+  const user = auth();
+
+  if (!user.userId) throw new Error("unauthorized");
+
+  const dbImage = await db.query.images.findFirst({
+    where: (model, { eq }) => eq(model.id, id),
+  });
+
+  if (!dbImage) throw new Error("Image Not Found");
+
+  if (user.userId !== dbImage?.userId) throw new Error("unauthorized");
+
+  return dbImage;
+}

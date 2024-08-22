@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
+import Link from "next/link";
 import { getMyImages } from "~/server/queries";
 
 async function ImageGallery() {
@@ -10,19 +11,21 @@ async function ImageGallery() {
   return (
     <>
       {dbImages.map(({ url, id, name }, index) => (
-        <div key={id} className="h-max">
-          <div className="relative h-36">
-            <Image
-              alt={name}
-              src={url}
-              fill
-              sizes="(min-width: 808px) 50vw, 100vw"
-              style={{
-                objectFit: "contain", // cover, contain, none
-              }}
-            />
-            <p className="my-2">{name}</p>
-          </div>
+        <div key={id} className="">
+          <Link href={"/imgs/" + id}>
+            <div className="relative h-36 w-56">
+              <Image
+                alt={name}
+                src={url}
+                fill
+                // sizes="(min-width: 808px) 50vw, 100vw"
+                style={{
+                  objectFit: "cover", // cover, contain, none
+                }}
+              />
+            </div>
+          </Link>
+          <p className="my-2">{name}</p>
         </div>
       ))}
     </>
