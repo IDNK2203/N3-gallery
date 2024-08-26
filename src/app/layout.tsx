@@ -29,10 +29,12 @@ export default function RootLayout(props: {
            */
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
-        <body className="flex flex-col gap-4">
+        <body className="grid h-screen grid-rows-[auto,1fr] gap-2">
           <TopNav />
-          {props.children}
-          {props.modal}
+          <div className="overflow-y-scroll p-2">
+            {props.children}
+            {props.modal}
+          </div>
           <div id="modal-root" />
         </body>
       </html>

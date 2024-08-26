@@ -9,33 +9,35 @@ async function ImageGallery() {
   const dbImages = await getMyImages();
 
   return (
-    <>
-      {dbImages.map(({ url, id, name }, index) => (
-        <div key={id} className="">
-          <Link href={"/imgs/" + id}>
-            <div className="relative h-36 w-56">
-              <Image
-                alt={name}
-                src={url}
-                fill
-                // sizes="(min-width: 808px) 50vw, 100vw"
-                style={{
-                  objectFit: "cover", // cover, contain, none
-                }}
-              />
-            </div>
-          </Link>
-          <p className="my-2">{name}</p>
-        </div>
-      ))}
-    </>
+    <ul className="grid  grid-cols-4 gap-2">
+      {[...dbImages, ...dbImages, ...dbImages, ...dbImages].map(
+        ({ url, id, name }, index) => (
+          <li key={id} className="flex-1">
+            <Link href={"/imgs/" + id}>
+              <div className="relative aspect-video w-full">
+                <Image
+                  alt={name}
+                  src={url}
+                  fill
+                  // sizes="(min-width: 808px) 50vw, 100vw"
+                  style={{
+                    objectFit: "cover", // cover, contain, none
+                  }}
+                />
+              </div>
+            </Link>
+            <p className="my-2">{name}</p>
+          </li>
+        ),
+      )}
+    </ul>
   );
 }
 
 export default function HomePage() {
   return (
     <main className="">
-      <div className="flex flex-wrap gap-2">
+      <div className="my-2">
         <SignedIn>
           <ImageGallery />
         </SignedIn>
