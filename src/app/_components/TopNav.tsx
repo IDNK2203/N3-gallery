@@ -7,7 +7,7 @@ import { UploadButton } from "~/utils/uploadthing";
 export default function TopNav() {
   const router = useRouter();
   return (
-    <nav className="flex justify-between border-b p-4 text-xl font-semibold">
+    <nav className="flex justify-between border-b-2 p-4 text-xl font-semibold">
       <p>
         {" "}
         <Link href={"/"}>N3-Gallery</Link>

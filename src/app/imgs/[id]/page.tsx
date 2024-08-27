@@ -9,5 +9,9 @@ export default function PhotoPage({
   const isNotNum = Number.isNaN(isIdNum);
   if (isNotNum) throw new Error("Invalid Id");
 
-  return <PhotoPageContainer id={isIdNum} />;
+  return (
+    <main className="m-2">
+      <PhotoPageContainer id={isIdNum} />
+    </main>
+  );
 }
