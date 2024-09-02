@@ -13,6 +13,8 @@
 - [x] use Next/Image component
 - [x] Add Error mgnt (w/ Sentry)
 - [x] Page Routing (w/ Parallel Routes)
+- [x] Added custom upload button
+- [x] Setup toast with (Shadcn uI)
 - [] Delete Button (w/ Server Actions)
 - [] Analytics (w/Posthug)
 - [] Ratelimiting (w/Upstash)

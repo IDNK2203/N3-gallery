@@ -6,6 +6,7 @@ import TopNav from "./_components/TopNav";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
+import { Toaster } from "~/components/ui/sonner";
 
 export const metadata = {
   title: "Create N3-Gallery",
@@ -29,11 +30,12 @@ export default function RootLayout(props: {
            */
           routerConfig={extractRouterConfig(ourFileRouter)}
         />
-        <body className="grid h-screen grid-rows-[auto,1fr] gap-2 ">
+        <body className="dark grid h-screen grid-rows-[auto,1fr] gap-2 ">
           <TopNav />
           <div className="overflow-y-scroll">{props.children}</div>
           {props.modal}
           <div id="modal-root" />
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>
