@@ -78,8 +78,7 @@ function Toasting() {
     </div>,
     {
       id: "upload-image",
-      duration: 10000,
-      dismissible: true,
+      dismissible: false,
     },
   );
 }

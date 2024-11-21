@@ -15,6 +15,11 @@
 - [x] Page Routing (w/ Parallel Routes)
 - [x] Added custom upload button
 - [x] Setup toast with (Shadcn uI)
-- [] Delete Button (w/ Server Actions)
 - [] Analytics (w/Posthug)
+  <!-- Posthug seems to be giving off error when working with clerk (VPN has nothing to do with it.) -->
+      - implement error boundaries
+      - [x] user tracking
+      - [x] ad block bypass
+      - [] capturing events
+- [] Delete Button (w/ Server Actions)
 - [] Ratelimiting (w/Upstash)
