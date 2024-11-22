@@ -1,8 +1,11 @@
 import { clerkClient } from "@clerk/nextjs/server";
 import Image from "next/image";
-import { getImage } from "~/server/queries";
+import { deleteImage, getImage } from "~/server/queries";
+import { Button } from "./ui/button";
 
 export default async function PhotoPageContainer({ id }: { id: number }) {
+  const idAsNumber = Number(id);
+
   const imageData = await getImage(id);
   const user = await clerkClient.users.getUser(imageData.userId);
   return (
@@ -31,6 +34,19 @@ export default async function PhotoPageContainer({ id }: { id: number }) {
           <p className="text-lg font-bold">
             {imageData.createdAt.toLocaleDateString()}
           </p>
+        </div>
+        <div className="p-2 px-4">
+          <form
+            action={async () => {
+              "use server";
+
+              await deleteImage(idAsNumber);
+            }}
+          >
+            <Button type="submit" variant="destructive">
+              Button
+            </Button>
+          </form>
         </div>
       </div>
     </div>
