@@ -103,7 +103,10 @@ export default function SimpleUploadBtn() {
     },
     onUploadError(error: Error) {
       // Do something with the error.
-      alert(`ERROR! ${error.message}`);
+      posthog?.capture("upload_error", { error });
+      toast.error(`ERROR! ${error.message}`);
+      toast.dismiss("upload-image");
+      // alert(`ERROR! ${error.message}`);
     },
   });
   return (
