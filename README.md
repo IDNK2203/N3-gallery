@@ -21,5 +21,6 @@
       - [x] user tracking
       - [x] ad block bypass
       - [x] capturing events
-- [] Delete Button (w/ Server Actions)
+- [x] Delete Button (w/ Server Actions)
+  - [x] add delete btn with server actions
 - [] Ratelimiting (w/Upstash)
